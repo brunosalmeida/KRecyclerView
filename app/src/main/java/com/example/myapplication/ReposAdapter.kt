@@ -7,18 +7,18 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 
-class ReposAdapter(val movies: List<Item>): RecyclerView.Adapter<ReposViewHolder>() {
+class ReposAdapter(val repos: List<Item>): RecyclerView.Adapter<ReposViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ReposViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_layout, parent, false)
         return ReposViewHolder(view)
     }
 
     override fun getItemCount(): Int {
-        return movies.size
+        return repos.size
     }
 
     override fun onBindViewHolder(holder: ReposViewHolder, position: Int) {
-        return holder.bind(movies[position])
+        return holder.bind(repos[position])
     }
 }
 

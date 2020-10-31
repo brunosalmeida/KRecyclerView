@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
      private fun getRepos() {
 
         val request = ServiceBuilder.buildService(Github::class.java)
-        val call = request.getMovies()
+        val call = request.getRepos()
 
         call.enqueue(object : Callback<PopularRepos> {
             override fun onResponse(call: Call<PopularRepos>, response: Response<PopularRepos>) {
